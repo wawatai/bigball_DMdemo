@@ -229,8 +229,8 @@ html body main .light01 {
   top: 0;
   left: 0;
   z-index: -2;
-  -webkit-animation: zoomIn 0.2s ease-in-out forwards;
-          animation: zoomIn 0.2s ease-in-out forwards;
+  -webkit-animation: zoomIn 0.2s 0.15s ease-in-out forwards;
+          animation: zoomIn 0.2s 0.15s ease-in-out forwards;
 }
 html body main .smoke {
   width: 365px;
@@ -251,8 +251,8 @@ html body main .light02 {
   bottom: 0px;
   right: -1px;
   z-index: -2;
-  -webkit-animation: zoomIn 0.2s ease-in-out forwards;
-          animation: zoomIn 0.2s ease-in-out forwards;
+  -webkit-animation: zoomIn 0.2s 0.15s ease-in-out forwards;
+          animation: zoomIn 0.2s 0.15s ease-in-out forwards;
 }
 html body main .bgItem {
   width: 1479px;
@@ -274,6 +274,23 @@ html body main .bg {
   z-index: -999;
 }
 
+@-webkit-keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes zoomIn {
   0% {
     opacity: 0;
@@ -282,7 +299,6 @@ html body main .bg {
     opacity: 1;
   }
 }
-
 @keyframes zoomIn {
   0% {
     opacity: 0;

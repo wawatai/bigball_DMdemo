@@ -205,7 +205,7 @@ html {
                 top: 0;
                 left: 0;
                 z-index: -2;
-                animation: zoomIn 0.2s ease-in-out forwards;
+                animation: zoomIn 0.2s 0.15s ease-in-out forwards;
             }
 
             .smoke {
@@ -228,7 +228,7 @@ html {
                 bottom: 0px;
                 right: -1px;
                 z-index: -2;
-                animation: zoomIn 0.2s ease-in-out forwards;
+                animation: zoomIn 0.2s 0.15s ease-in-out forwards;
             }
 
             .bgItem {
@@ -253,6 +253,14 @@ html {
                 z-index: -999;
             }
         }
+    }
+}
+@keyframes invisible {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }
 @keyframes zoomIn {
