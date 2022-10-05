@@ -105,9 +105,8 @@ html body main .center .left .mainObject {
   position: absolute;
   top: 11px;
   left: -410px;
-  opacity: 0;
-  -webkit-animation: zoomIn 0.2s ease-in forwards;
-          animation: zoomIn 0.2s ease-in forwards;
+  -webkit-animation: invisible 0.2s ease-in-out, zoomIn 0.2s 0.2s ease-in forwards;
+          animation: invisible 0.2s ease-in-out, zoomIn 0.2s 0.2s ease-in forwards;
 }
 html body main .center .right {
   width: 50%;
