@@ -1,14 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "my_font";
-  src: local("Heiti TC"), local("微軟正黑體"), local("Microsoft JhengHei");
-  unicode-range: U+4E00-9FFF, U+2E80-2EFF, U+0020-007F;
-}
-@font-face {
-  font-family: "my_font";
-  src: url(../font/Bahnschrift.TTF);
-  unicode-range: U+0020-007F;
-}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
 center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -68,6 +58,8 @@ html {
   background: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font: inherit;
+  font-family: "微軟正黑體";
   margin: 0px auto;
 }
 
@@ -106,15 +98,16 @@ html body main .center .left {
   position: relative;
 }
 html body main .center .left .mainObject {
-  width: 1213px;
-  height: 913px;
+  width: 1221px;
+  height: 949px;
   background: url(../img/mainObject.png) no-repeat;
   background-size: contain;
   position: absolute;
-  top: 12px;
-  left: -406px;
-  -webkit-animation: showIn 0.5s ease-in forwards;
-          animation: showIn 0.5s ease-in forwards;
+  top: 11px;
+  left: -410px;
+  opacity: 0;
+  -webkit-animation: zoomIn 0.2s ease-in forwards;
+          animation: zoomIn 0.2s ease-in forwards;
 }
 html body main .center .right {
   width: 50%;
@@ -236,6 +229,8 @@ html body main .light01 {
   top: 0;
   left: 0;
   z-index: -2;
+  -webkit-animation: zoomIn 0.2s ease-in-out forwards;
+          animation: zoomIn 0.2s ease-in-out forwards;
 }
 html body main .smoke {
   width: 365px;
@@ -256,6 +251,18 @@ html body main .light02 {
   bottom: 0px;
   right: -1px;
   z-index: -2;
+  -webkit-animation: zoomIn 0.2s ease-in-out forwards;
+          animation: zoomIn 0.2s ease-in-out forwards;
+}
+html body main .bgItem {
+  width: 1479px;
+  height: 427px;
+  background: url(../img/BGitem.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 576px;
+  left: 234px;
+  z-index: -3;
 }
 html body main .bg {
   width: 100%;
@@ -265,4 +272,22 @@ html body main .bg {
   position: absolute;
   top: 0;
   z-index: -999;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
